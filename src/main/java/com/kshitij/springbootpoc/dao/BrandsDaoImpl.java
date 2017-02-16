@@ -23,7 +23,7 @@ public class BrandsDaoImpl implements BrandsDao {
     @Override
     public void addBrand(Brand brand) {
         Session session=sessionFactory.getCurrentSession();
-        session.persist(brand);
+        session.saveOrUpdate(brand);
 
     }
 

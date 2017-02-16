@@ -1,5 +1,6 @@
 package com.kshitij.springbootpoc.controller;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,12 +27,12 @@ public class PocController {
        return brandsService.getAllBrands();
     }
     @RequestMapping(value="/add",method=RequestMethod.POST)
-    public String addBrand(@RequestBody Brand brand){
+    public void addBrand(@RequestBody Brand brand){
         //Brand brand=new Brand();
-        System.out.println("Brand is "+brand.toString());
+        System.out.println("Brand is  "+brand.toString()+" "+new Date());
         //brand.setBrand_name("Maruti");
         //brand.setComments("Added via Spring Boot");
         brandsService.addBrand(brand);
-        return "Added brand Successfully. Whay dont you test it.";
+        //return "Added";
     }
 }
