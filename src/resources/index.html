@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<body>
+
+	<div ng-app="myApp" ng-controller="mainController">
+		<table>
+			<tr>
+				<td>ID:</td>
+				<td><input type="text" ng-model="reviewObj.id"></td>
+			</tr>
+			<tr>
+				<td>Brand Name:</td>
+				<td><input type="text" ng-model="reviewObj.brandName"></td>
+			</tr>
+			<tr>
+				<td>Description:</td>
+				<td><input type="text" ng-model="reviewObj.comment"></td>
+			</tr>
+			<tr>
+				<td>
+					<button type="button" class="btn btn-primary  active"
+						ng-click="save()">Save</button>
+				</td>
+				<td>
+
+					<button type="button" class="btn btn-primary  active"
+						ng-click="getAllRecords()">Get All</button>
+				</td>
+			</tr>
+		</table>
+		<br>
+
+		<div ng-repeat="row in reviewList">{{row.id}}-{{row.brandName}}-{{row.comment}}</div>
+
+	</div>
+</body>
+</html>

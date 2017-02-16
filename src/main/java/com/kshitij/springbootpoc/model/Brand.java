@@ -6,6 +6,8 @@ import javax.persistence.Id;
 
 import org.hibernate.annotations.GenericGenerator;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 @Entity
 
 public class Brand {
@@ -13,6 +15,7 @@ public class Brand {
     @GenericGenerator(name = "uuid-gen", strategy = "uuid")
     @GeneratedValue(generator = "uuid-gen")
     private String brand_Id;
+    @JsonProperty("brandName")
     private String brand_Name;
     private String comments;
     /**

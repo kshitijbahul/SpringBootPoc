@@ -17,7 +17,7 @@ public class PocController {
     @Autowired
     private BrandsService brandsService;
     
-    @RequestMapping(value="/",method=RequestMethod.GET)
+    @RequestMapping(value="/getAll",method=RequestMethod.GET)
     public List<Brand> defaultRequestHandler(){
        StringBuilder sb= new StringBuilder();
        sb.append("POST /add : To add a new Vehical");
