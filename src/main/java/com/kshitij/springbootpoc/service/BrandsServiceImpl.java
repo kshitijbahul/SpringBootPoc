@@ -35,5 +35,10 @@ public class BrandsServiceImpl implements BrandsService {
         // TODO Auto-generated method stub
         return brandsDao.findBrand(brandName);
     }
+    @Override
+    public List<Brand> getAllBrands() {
+        // TODO Auto-generated method stub
+        return brandsDao.getAllBrands();
+    }
 
 }

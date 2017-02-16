@@ -10,4 +10,5 @@ public interface BrandsDao {
     void removeBrand(Brand brand);
     void updateBrand(Brand brand);
     List<Brand> findBrand(String brandName);
+    List<Brand> getAllBrands();
 }

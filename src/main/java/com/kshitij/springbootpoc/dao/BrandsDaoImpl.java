@@ -48,5 +48,12 @@ public class BrandsDaoImpl implements BrandsDao {
         return query.list();
 
     }
+    
+    @Override
+    public List<Brand> getAllBrands(){
+    	Session session=sessionFactory.getCurrentSession();
+    	Query query=sessionFactory.getCurrentSession().createQuery("from Brand ");
+    	return query.list();  	
+    }
 
 }
