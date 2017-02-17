@@ -3,24 +3,24 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
 <script src="js/app.js"></script>
-	
+<link rel="stylesheet" href="css/app.css" />	
 <body>
 
 	<div ng-app="myApp" ng-controller="mainController">
 
-		<div style="border: thin solid black; margin: 10% 10%; padding: 5% 5%">
+		<!-- <div style="border: thin solid black; margin: 10% 10%; padding: 5% 5%">
 			<table>
-				<!-- <tr>
+				<tr>
 					<td>ID:</td>
 					<td><input type="text" ng-model="reviewObj.id"></td>
-				</tr> -->
+				</tr>
 				<tr>
 					<td>Brand Name:</td>
 					<td><input type="text" ng-model="reviewObj.brandName"></td>
 				</tr>
 				<tr>
 					<td>Comment:</td>
-					<td><textarea rows="4" cols="50" ng-model="reviewObj.comments"></td>
+					<td><textarea rows="4" cols="50" ng-model="reviewObj.comments"></textarea></td>
 				</tr>
 				<tr>
 					<td>
@@ -30,10 +30,20 @@
 					<td></td>
 				</tr>
 			</table>
+		</div> -->
+		<div class="form-style-5">
+			<form>
+			  <fieldset>
+			    <legend><span class="number">1</span> Submit Comments</legend>
+			    <input type="text" name="field1" placeholder="Your Name" ng-model="reviewObj.brandName">
+			    <textarea name="field3" placeholder="Comments" ng-model="reviewObj.comments"></textarea>
+			  </fieldset>
+			  <input type="submit" value="Submit my Comment" ng-click="saveReviewForm()"/>
+			  </form>
 		</div>
 			
 
-			<br>
+			<!-- <br>
 			<div ng-if="reviewList.length !== 0">
 				<table border="solid" width="80%">
 					<tr>
@@ -47,7 +57,33 @@
 						<td>{{row.comments}}</td>
 					</tr>
 				</table>
-			</div>
+			</div> -->
+			<section>
+			  <!--for demo wrap-->
+			  <h1>All Comments</h1>
+			  <div class="tbl-header">
+			    <table cellpadding="0" cellspacing="0" border="0">
+			      <thead>
+			        <tr>
+			          <th>Comment Number</th>
+			          <th>Name</th>
+			          <th>Comment</th>
+			        </tr>
+			      </thead>
+			    </table>
+			  </div>
+			  <div class="tbl-content">
+			    <table cellpadding="0" cellspacing="0" border="0">
+			      <tbody>
+			        <tr ng-repeat="row in reviewList">
+			          <td>{{$index+1}}</td>
+			          <td>{{row.brandName}}</td>
+			          <td>{{row.comments}}</td>
+			        </tr>
+			      </tbody>
+			    </table>
+			  </div>
+			</section>
 		</div>
 	</div>
 </body>
