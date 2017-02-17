@@ -1,0 +1,8 @@
+deployment:
+  staging:
+    branch: master
+    #branch: deploymenttest
+    commands:
+      - chmod 600 hellomilesawskeypair.pem
+      - chmod +x deployment-dev.sh
+      - ./deployment-dev.sh
