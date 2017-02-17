@@ -3,6 +3,6 @@ deployment:
     branch: master
     #branch: deploymenttest
     commands:
-      - chmod 600 hellomilesawskeypair.pem
+      - chmod 600 milescampawskeypair.pem
       - chmod +x deployment-dev.sh
       - ./deployment-dev.sh
