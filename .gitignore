@@ -7,3 +7,6 @@ build/*
 src/main/resources/static/node/*
 src/main/resources/static/node_modules/*
 *.DS_Store
+.idea/*
+.metadata/*
+*.iml
